@@ -1,5 +1,10 @@
 4/6 set up boiler plate from https://github.com/Code-Institute-Solutions/Jest_Testing_Part2/tree/main/00_boilerplate
 
+nmp init
+nmp install
+const in test files
+export in js file
+
 
 This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
 
