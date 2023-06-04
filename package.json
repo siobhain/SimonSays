@@ -1,0 +1,14 @@
+{
+  "name": "simonsays",
+  "version": "1.0.0",
+  "description": "4/6 set up boiler plate from https://github.com/Code-Institute-Solutions/Jest_Testing_Part2/tree/main/00_boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
