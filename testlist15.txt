@@ -1,0 +1,15 @@
+    test("score key exists", () => {
+    test("currentGame key exists", () => {
+    test("playerMoves key exists", () => {
+    test("choices key exists", () => {
+    test("choices contain correct ids", () => {
+    test("turnNumber key exists", () => {
+    test("should set game score to zero", () => {
+    test("should display 0 for the element with id of score", () => {
+    test("should clear the player moves array", () => {
+    test("should add one move to the computer's game array", () => {
+    test("expect data-listener to be true", () => {
+    test("addTurn adds a new turn to the game", () => {
+    test("should add correct class to light up the buttons", () => {
+    test("showTurns should update game.turnNumber", () => {
+    test("score is incremented when player picks right circle", () => {

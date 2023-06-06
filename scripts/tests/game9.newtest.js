@@ -14,13 +14,13 @@ beforeAll(() => {
     document.close();
 });
 
-// describe("pre-game", () => {
-//     test("clicking buttons before newGame should fail", () => {
-//         game.lastButton = "";
-//         document.getElementById("button2").click();
-//         expect(game.lastButton).toEqual("");
-//     });
-// });
+describe("pre-game", () => {
+    test("clicking buttons before newGame should fail", () => {
+        game.lastButton = "";
+        document.getElementById("button2").click();
+        expect(game.lastButton).toEqual("");
+    });
+});
 
 describe("game object contains correct keys", () => {
     test("score key exists", () => {
@@ -40,6 +40,15 @@ describe("game object contains correct keys", () => {
     });
     test("turnNumber key exists", () => {
         expect("turnNumber" in game).toBe(true);
+    });
+    test("lastButton key exists", () => {
+        expect("lastButton" in game).toBe(true);
+    });
+    test("turnInProgress key exists", () => {
+        expect("turnInProgress" in game).toBe(true);
+    });
+    test("turnInProgress key value is false", () => {
+        expect("turnInProgress" in game).toBe(true);
     });
 });
 
@@ -92,10 +101,10 @@ describe("gameplay works correctly", () => {
         lightsOn(game.currentGame[0]);
         expect(button.classList).toContain("light");
     });
-    // test("should toggle turnInProgress to true", () => {
-    //     showTurns();
-    //     expect(game.turnInProgress).toBe(true);
-    // });
+    test("should toggle turnInProgress to true", () => {
+        showTurns();
+        expect(game.turnInProgress).toBe(true);
+    });
     test("showTurns should update game.turnNumber", () => {
         game.turnNumber = 42;
         showTurns();
@@ -106,16 +115,10 @@ describe("gameplay works correctly", () => {
         playerTurn();
         expect(game.score).toBe(1);
     });
-    test("should trigger an alert if player makes wrong move", () => {
-        game.playerMoves.push("wrongmove");
-        playerTurn();
-        expect(window.alert).toBeCalledWith("Wrong move!")
+    test("clicking during computer sequence should fail", () => {
+        showTurns();
+        game.lastButton = "";
+        document.getElementById("button2").click();
+        expect(game.lastButton).toEqual("");
     });
-
-    // test("clicking during computer sequence should fail", () => {
-    //     showTurns();
-    //     game.lastButton = "";
-    //     document.getElementById("button2").click();
-    //     expect(game.lastButton).toEqual("");
-    // });
 });

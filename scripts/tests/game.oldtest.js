@@ -112,6 +112,7 @@ describe("gameplay works correctly", () => {
         expect(window.alert).toBeCalledWith("Wrong move!")
     });
 
+    })
     // test("clicking during computer sequence should fail", () => {
     //     showTurns();
     //     game.lastButton = "";
